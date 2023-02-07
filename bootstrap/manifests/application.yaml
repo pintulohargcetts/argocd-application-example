@@ -19,6 +19,4 @@ spec:
   syncPolicy:
     syncOptions:
     - CreateNamespace=true # create if not exists . 
-    automated:
-      selfHeal: false # Allow manual changes , dont override it. # efault 180 sec.
-      prune: true # 
+    automated: {}
