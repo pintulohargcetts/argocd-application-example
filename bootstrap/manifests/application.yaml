@@ -8,7 +8,7 @@ metadata:
 spec:
   project: argocd-application-example
   source:
-    path: argocd/apps/ucp-example # it watches over the apps directory
+    path: argocd-application-example/apps/ucp-example # it watches over the apps directory
     repoURL: https://github.com/pintulohargcetts/argocd-application-example.git # always put the .git extension here
     targetRevision: HEAD
     directory:
