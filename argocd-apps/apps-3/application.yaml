@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-apps-4
+  name: my-apps-3
   namespace: argocd
 spec:
   project: default
   source:
-    path: my-apps/apps-4
+    path: my-apps/apps-3
     repoURL: 'https://github.com/pintulohargcetts/argocd-application-example.git'
     targetRevision: HEAD
     helm:
