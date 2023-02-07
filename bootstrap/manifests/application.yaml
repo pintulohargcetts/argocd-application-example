@@ -8,7 +8,7 @@ metadata:
 spec:
   project: argocd-application-example
   source:
-    path: apps/ucp-example # it watches over the apps directory
+    path: apps/ucpkubeyaml # it watches over the apps directory
     repoURL: https://github.com/pintulohargcetts/argocd-application-example.git # always put the .git extension here
     targetRevision: HEAD
     directory:
@@ -21,4 +21,4 @@ spec:
     - CreateNamespace=true # create if not exists . 
     automated:
       selfHeal: false # Allow manual changes , dont override it. # efault 180 sec.
-      #prune: true # 
+      prune: true # 
