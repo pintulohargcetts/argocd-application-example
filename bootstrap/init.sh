@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Create repository and API Token variables
-read -p "Enter the full repository URL (with .git at the end): " repository
+repository=https://github.com/pintulohargcetts/argocd-application-example.git
+echo "using $repository to setup your apps"
+#read -p "Enter the full repository URL (with .git at the end): " repository
 read -p "Enter the Git API token with api scope permissions: " git_api_token
 read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
