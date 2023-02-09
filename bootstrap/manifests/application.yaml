@@ -11,8 +11,6 @@ spec:
     path: argocd-apps # it watches over the apps directory
     repoURL: https://github.com/pintulohargcetts/argocd-application-example.git # always put the .git extension here
     targetRevision: HEAD
-    directory:
-      recurse: true
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: beta 
