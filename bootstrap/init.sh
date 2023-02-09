@@ -27,8 +27,7 @@ helm install argocd -n argocd argo/argo-cd -f values.yaml
 echo "Configuring repository access..."
 kubectl create secret generic example-infrastructure-repo --namespace=argocd --type=Opaque --from-literal=url=$repository --from-literal=password=$git_api_token
 kubectl label secret -n argocd example-infrastructure-repo argocd.argoproj.io/secret-type=repository
-./scripts/check_pods_status.sh
-echo $(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d)
+
 # Create project
 echo "Creating the main project..."
 kubectl apply -f manifests/project.yaml

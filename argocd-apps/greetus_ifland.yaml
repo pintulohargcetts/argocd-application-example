@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-app-1
+  name: my-sub-apps
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -15,4 +15,5 @@ spec:
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: beta # meetus-qa
+    
   syncPolicy: {}
