@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    path:  argocd-apps # it watches over the apps directory
+    path:  argocd-apps/greetus-ifland/apps-2/ # it watches over the apps directory
     repoURL: https://github.com/pintulohargcetts/argocd-application-example.git # always put the .git extension here
     targetRevision: HEAD
     directory:

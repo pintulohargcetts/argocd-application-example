@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app-1
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    path:  argocd-apps/baseapps # it watches over the apps directory
+    repoURL: https://github.com/pintulohargcetts/argocd-application-example.git # always put the .git extension here
+    targetRevision: HEAD
+
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: beta # meetus-qa
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true # create if not exists . 
+    automated: 
+      selfHeal: false
+      prune: false
