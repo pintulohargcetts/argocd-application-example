@@ -12,7 +12,7 @@ spec:
     repoURL: https://github.com/pintulohargcetts/argocd-application-example.git # always put the .git extension here
     targetRevision: HEAD
     directory:
-      exclude: ‘{helm/*}’
+      exclude: ‘{resources/*}’
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: beta # meetus-qa

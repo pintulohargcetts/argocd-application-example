@@ -1,16 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-app-1
+  name: my-app-2
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    path:  argocd-apps/meetus-ifland/my-apps-1 # it watches over the apps directory
+    path:  argocd-apps/apps-2/resources # it watches over the apps directory
     repoURL: https://github.com/pintulohargcetts/argocd-application-example.git # always put the .git extension here
     targetRevision: HEAD
+    directory:
+      exclude: ‘{resources/*}’
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: beta # meetus-qa
