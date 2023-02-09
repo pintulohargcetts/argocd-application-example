@@ -14,9 +14,5 @@ spec:
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: beta 
-  syncPolicy:
-    syncOptions:
-    - CreateNamespace=true # create if not exists . 
-    automated: 
-      selfHeal: true
-      prune: true
+  syncPolicy: {}
+   
